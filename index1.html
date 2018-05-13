@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    
+    <script src="JS/angular.js"></script>
+    <script>
+    
+    var MyApp=angular.module('app', []);
+        
+        MyApp.controller('demoController', function($scope){
+            
+            $scope.myTitle="Hello AngularJS";
+        });
+        
+        MyApp.controller('studentData', function($scope){
+            
+            $scope.myRno=101;
+            $scope.myName='Shiva';
+            $scope.myAddr="Pune";    
+        });
+        
+    </script>
+    
+    </head>
+    
+    <body ng-app="app" >
+    
+        <div ng-controller="demoController">
+            {{myTitle}}
+        </div>
+        
+        <div ng-controller="studentData">
+            {{myRno}}
+            {{myName}}
+            {{myAddr}}
+        </div>
+    
+    </body>
+
+</html>
